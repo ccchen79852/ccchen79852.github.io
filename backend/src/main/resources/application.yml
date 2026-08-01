@@ -4,14 +4,15 @@ spring:
       max-file-size: 5MB
       max-request-size: 6MB
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/lin_blog?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
-    username: root
-    password: ${DB_PASSWORD}
+    url: ${DATABASE_URL:jdbc:mysql://127.0.0.1:3306/lin_blog?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai}
+    username: ${MYSQLUSER:root}
+    password: ${MYSQLPASSWORD:${DB_PASSWORD:}}
   jpa:
     hibernate:
       ddl-auto: update
     open-in-view: false
 app:
   admin-password: ${ADMIN_PASSWORD}
+  upload-dir: ${UPLOAD_DIR:uploads}
 server:
-  port: 8080
+  port: ${PORT:8080}
