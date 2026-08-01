@@ -1,0 +1,6 @@
+.mysql/
+backend/target/
+frontend/node_modules/
+frontend/dist/
+backend/.env
+.tools/

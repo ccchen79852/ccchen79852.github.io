@@ -1,0 +1,1 @@
+{"name":"lin-blog-web","private":true,"version":"1.0.0","type":"module","scripts":{"dev":"vite","build":"vite"},"dependencies":{"vue":"^3.5.0"},"devDependencies":{"@vitejs/plugin-vue":"^5.1.0","vite":"^6.0.0"}}
