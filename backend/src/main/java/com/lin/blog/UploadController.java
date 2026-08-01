@@ -11,7 +11,7 @@ import java.util.*;
 
 @RestController
 @RequestMapping("/api/admin")
-@CrossOrigin(origins="http://localhost:5173")
+@CrossOrigin(originPatterns={"http://localhost:*","https://*.up.railway.app"})
 public class UploadController {
   private final AdminAuth auth;
   private final Path dir;
